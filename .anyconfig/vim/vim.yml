@@ -1,0 +1,8 @@
+dependencies:
+  noCommand:
+    - vim 
+install:
+  pacman:
+    - gvim
+  apt:
+    - vim-gtk3

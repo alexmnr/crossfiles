@@ -1,0 +1,14 @@
+dependencies:
+  noCommand:
+    - yay
+  user:
+    - noroot
+  os:
+    - arch
+install:
+  pkg:
+    - git
+    - base-devel
+  cmd:
+    - Cloning yay | git -C /tmp clone https://aur.archlinux.org/yay.git
+    - Installing yay | cd /tmp/yay && makepkg -si --noconfirm

@@ -1,0 +1,15 @@
+dependencies:
+  os: 
+    - arch
+  task:
+    - /arch/yay
+    - tmux/tmux
+  noCommand:
+    - tmuxinator
+install:
+  yay:
+    - tmuxinator
+  ln:
+    - Linking workspaces | {repo}/tmuxinator > {home}/.config/
+  cp:
+    - Copying mux add-in | {home}/.rc-temp/mux.sh > {home}/.rc/
