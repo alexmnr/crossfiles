@@ -25,11 +25,16 @@ ZSH_THEME="senaex"
 plugins=(
 	zsh-syntax-highlighting
 	zsh-autosuggestions
+  virtualenv
 )
 
 ZSH_DISABLE_COMPFIX=true
 
+if [ -f ~/.rc/theme.sh ]; then
+  source ~/.rc/theme.sh
+fi
 source $ZSH/oh-my-zsh.sh
+
 ###################Aliases#################
 alias rc="vim ~/.zshrc"
 alias vrc="vim ~/.vimrc"
