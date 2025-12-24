@@ -21,11 +21,11 @@ return {
 		map("n", "<leader>9", "<Cmd>BufferGoto 9<CR>", opts)
 		map("n", "<leader>0", "<Cmd>BufferLast<CR>", opts)
 		-- Pin/unpin buffec
-		map("n", "<leader>tp", "<Cmd>BufferPin<CR>", opts)
+		map("n", "<leader>p", "<Cmd>BufferPin<CR>", opts)
 		-- Close buffer
-		map("n", "<leader>td", "<Cmd>BufferClose<CR>", opts)
+		map("n", "<leader>d", "<Cmd>BufferClose<CR>", opts)
 		-- Magic buffer-picking mode
-		map("n", "<leader>ts", "<Cmd>BufferPick<CR>", opts)
+		map("n", "<leader>s", "<Cmd>BufferPick<CR>", opts)
 		-- Sort automatically by...
 		-- map('n', '<leader>tb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
 		-- map('n', '<leader>td', '<Cmd>BufferOrderByDirectory<CR>', opts)
