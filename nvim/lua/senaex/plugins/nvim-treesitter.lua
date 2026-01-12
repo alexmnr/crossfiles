@@ -1,17 +1,16 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
-    lazy = false,
-		build = ":TSUpdate",
 		event = { "BufReadPre", "BufNewFile" },
+		build = ":TSUpdate",
 		dependencies = {
-			-- "nvim-treesitter/nvim-treesitter-textobjects",
-			-- "JoosepAlviste/nvim-ts-context-commentstring",
+			"nvim-treesitter/nvim-treesitter-textobjects",
+			"JoosepAlviste/nvim-ts-context-commentstring",
 			"windwp/nvim-ts-autotag",
 		},
 		config = function()
 			-- import nvim-treesitter plugin
-			local treesitter = require("nvim-treesitter")
+			local treesitter = require("nvim-treesitter.configs")
 
 			-- configure treesitter
 			treesitter.setup({ -- enable syntax highlighting
@@ -26,16 +25,6 @@ return {
 				},
 				-- ensure these language parsers are installed
 				ensure_installed = {
-          "arduino",
-          "c",
-          "c_sharp",
-          "cmake",
-          "make",
-          "cpp",
-          "python",
-          "go",
-          "css",
-          "html",
 					"json",
 					"yaml",
 					"bash",
@@ -44,19 +33,19 @@ return {
 					"dockerfile",
 					"gitignore",
 				},
-				-- incremental_selection = {
-				-- 	enable = true,
-				-- 	keymaps = {
-				-- 		init_selection = "<C-space>",
-				-- 		node_incremental = "<C-space>",
-				-- 		scope_incremental = false,
-				-- 		node_decremental = "<bs>",
-				-- 	},
-				-- },
+				incremental_selection = {
+					enable = true,
+					keymaps = {
+						init_selection = "<C-space>",
+						node_incremental = "<C-space>",
+						scope_incremental = false,
+						node_decremental = "<bs>",
+					},
+				},
 			})
 
 			-- enable nvim-ts-context-commentstring plugin for commenting tsx and jsx
-			-- require("ts_context_commentstring").setup({})
+			require("ts_context_commentstring").setup({})
 		end,
 	},
 }
